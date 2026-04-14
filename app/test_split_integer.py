@@ -8,7 +8,6 @@ import app.split_integer as split_integer_module
     (17, 4, [4, 4, 4, 5]),
     (32, 6, [5, 5, 5, 5, 6, 6]),
 ])
-
 def test_examples(value: int, parts: int, expected: list[int]) -> None:
     assert split_integer_module.split_integer(value, parts) == expected
 
@@ -23,7 +22,6 @@ def test_examples(value: int, parts: int, expected: list[int]) -> None:
     (10, 4),
     (100, 7),
 ])
-
 def test_properties(value: int, parts: int) -> None:
     result = split_integer_module.split_integer(value, parts)
     assert len(result) == parts
@@ -41,7 +39,6 @@ def test_properties(value: int, parts: int) -> None:
     (2, 5),
     (32, 6),
 ])
-
 def test_matches_expected_distribution(value: int, parts: int) -> None:
     base = value // parts
     rem = value % parts
